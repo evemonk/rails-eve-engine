@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 describe Eve::Character do
+  it { should be_an(ApplicationRecord) }
+
   it { should belong_to(:alliance).with_primary_key(:alliance_id) } # TODO: add .optional()
 
   it { should belong_to(:ancestry).with_primary_key(:ancestry_id) } # TODO: add .optional()
